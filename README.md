@@ -5,7 +5,7 @@ BlackMirror is a side project inspired by Hannah Mitt's [HomeMirror](https://git
 ### Features
   
   - Date and Time
-  - Exercise (pull from nike+)
+  - Exercise (pull from (nike+)[https://developer.nike.com/content/nike-developer-cq/us/en_us/index/documentation/api-docs.html])
   - Weather (pull from forecast.io)
   - Weather Logic (umbrella or no umbrella)
   - Weather Icons (pull from https://fortawesome.github.io/Font-Awesome/)
