@@ -3,9 +3,10 @@
 BlackMirror is a side project inspired by Hannah Mitt's [HomeMirror](https://github.com/HannahMitt/HomeMirror).
 
 ### Features
- 
+  
   - Date and Time
   - Weather (pull from forecast.io)
+  - Exercise (pull from health app?)
   - Weather Logic (umbrella or no umbrella)
   - Weather Icons (pull from https://fortawesome.github.io/Font-Awesome/)
   - Subway (pull from http://datamine.mta.info/)
