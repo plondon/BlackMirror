@@ -6,6 +6,7 @@
 	  "grunt-autoprefixer": "^3.0.3",
 	  "grunt-contrib-watch": "^0.6.1",
 	  "grunt-contrib-requirejs": "^0.4.4",
+	  "grunt-shell-spawn": "^0.3.2",
 	  "grunt-sass": "^1.0.0"
 	},
 	"main": "server.js",

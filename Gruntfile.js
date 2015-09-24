@@ -44,13 +44,24 @@ module.exports = function(grunt) {
 		      }
 		    }
 		  }
+		},
+
+		shell: {
+		  server: {
+		    command: 'killall node; node server.js',
+		    options: {
+		      async: true
+		    }
+		  }
 		}
 	});
 
 	grunt.loadNpmTasks('grunt-sass');
+	grunt.loadNpmTasks('grunt-shell-spawn');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-requirejs');
 
-	grunt.registerTask('default', ['watch']);
+
 	grunt.registerTask('build', ['requirejs']);
+	grunt.registerTask('default', ['shell:server', 'watch']);
 };
