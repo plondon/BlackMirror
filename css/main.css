@@ -63,11 +63,71 @@ table {
   letter-spacing: 0px;
 }
 
+@font-face {
+  font-family: 'icomoon';
+  src: url("./fonts/icomoon/fonts/icomoon.eot?9d6p5j");
+  src: url("./fonts/icomoon/fonts/icomoon.eot?#iefix9d6p5j") format("embedded-opentype"), url("./fonts/icomoon/fonts/icomoon.ttf?9d6p5j") format("truetype"), url("./fonts/icomoon/fonts/icomoon.woff?9d6p5j") format("woff"), url("./fonts/icomoon/fonts/icomoon.svg?9d6p5j#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^=""], [class*=" "] {
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.clear-day:before {
+  content: "\e600";
+}
+
+.clear-night:before {
+  content: "\e601";
+}
+
+.cloudy:before {
+  content: "\e602";
+}
+
+.fog:before {
+  content: "\e603";
+}
+
+.partly-cloudy-day:before {
+  content: "\e604";
+}
+
+.partly-cloudy-night:before {
+  content: "\e605";
+}
+
+.rain:before {
+  content: "\e606";
+}
+
+.sleet:before {
+  content: "\e607";
+}
+
+.snow:before {
+  content: "\e608";
+}
+
+.wind:before {
+  content: "\e609";
+}
+
 html, body {
   text-align: right;
   padding: 20px;
 }
 
-.clock {
+.clock, .weather {
   font-size: 72px;
+  margin-bottom: 15px;
+}
+
+.weather:before {
+  margin-right: 40px;
+  font-family: 'icomoon';
 }

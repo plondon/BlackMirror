@@ -1,4 +1,5 @@
 var express = require('express');
+var request = require('request');
 var app = express();
 
 // set the port of our application
@@ -14,6 +15,19 @@ app.use(express.static(__dirname + '/'));
 
 app.get('/', function(req, res) {
   res.render('index.html');
+});
+
+app.get('/weather', function(req, res) {
+	var lng = '-73.984511';
+	var lat = '40.7694445';
+	var key = 'edfb819a19e630697ed7519902c209ee';
+	var url = 'https://api.forecast.io/forecast/' + key + '/' + lat + ',' + lng;
+
+	request(url, function(d) {
+		res.writeHead(200, {"Content-Type": "application/json"});
+		res.write(JSON.stringify(d));
+		res.end();
+	});
 });
 
 app.listen(port, function() {
