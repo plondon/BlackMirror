@@ -2,17 +2,15 @@ define([
   'jquery',
   'underscore',
   'backbone'
-], function ($, _, Backbone) {
+], function($, _, Backbone) {
 
 "use strict";
-
-/* For icons */
-// // https://thenounproject.com/yxorama/collection/weather-icons/?oq=clear%20night&cidx=1
 
 var WeatherView = Backbone.View.extend({
 	initialize: function() {
 		var self = this;
 		var req = $.get('/weather');
+
 		req.done(function(d) { self.render(d); });
 
 		/* Update every 5 minutes */

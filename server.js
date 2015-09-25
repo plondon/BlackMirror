@@ -23,7 +23,7 @@ app.get('/weather', function(req, res) {
 	var key = 'edfb819a19e630697ed7519902c209ee';
 	var url = 'https://api.forecast.io/forecast/' + key + '/' + lat + ',' + lng;
 
-	request(url, function(d) {
+	request(url, function(err, d) {
 		res.writeHead(200, {"Content-Type": "application/json"});
 		res.write(JSON.stringify(d));
 		res.end();
