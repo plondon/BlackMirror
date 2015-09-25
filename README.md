@@ -13,7 +13,7 @@ BlackMirror is a side project inspired by Hannah Mitt's [HomeMirror](https://git
 ### Stack
 
   - Node and Express
-  - Backbone (or React?)
+  - Backbone
   - Sass
   - Grunt
 
