@@ -118,6 +118,7 @@ table {
 }
 
 html, body {
+  font-family: 'Dosis', sans-serif;
   text-align: right;
   padding: 20px;
 }
