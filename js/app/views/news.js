@@ -42,7 +42,7 @@ var NewsView = Backbone.View.extend({
 		$($list[idx]).addClass('active');
 
 		this.idx = idx+1;
-		if ( this.idx > 8 ) {
+		if ( this.idx >= 8 ) {
 			this.idx = 0;
 		}
 	}
