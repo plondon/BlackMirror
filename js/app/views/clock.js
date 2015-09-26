@@ -9,7 +9,7 @@ define([
 var ClockView = Backbone.View.extend({
 	initialize: function() {
 		this.ticktock();
-		setInterval( this.ticktock.bind(this) );
+		setInterval( this.ticktock.bind(this), 1000 );
 	},
 	ticktock: function() {
 		var time = new Date();
