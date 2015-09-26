@@ -15,19 +15,18 @@ body {
 }
 
 .weather, .subway {
-	font-size: 42px;
-	margin-bottom: 15px;
+	margin-bottom: 30px;
 }
 
 .clock .date {
-	font-size: 24px;
-	margin-bottom: 15px;
+	font-size: 52px;
+	margin-bottom: 20px;
 }
 
 .clock .time {
-	font-size: 64px;
+	font-size: 128px;
 	font-weight: bold;
-	margin-bottom: 30px;
+	margin-bottom: 50px;
 	> span {
 		font-size: 24px;
 		margin-left: 5px;
@@ -36,6 +35,7 @@ body {
 }
 
 .weather {
+	font-size: 100px;
 	&:before {
 		margin-right: 20px;
 		font-family: 'icomoon';
@@ -43,6 +43,7 @@ body {
 }
 
 .subway {
+	font-size: 52px;
 	img {
 		margin-right: 20px;
 	}
