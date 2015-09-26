@@ -15,7 +15,7 @@ body {
 }
 
 .weather, .subway {
-	margin-bottom: 30px;
+	margin-bottom: 60px;
 }
 
 .clock .date {
@@ -26,7 +26,7 @@ body {
 .clock .time {
 	font-size: 128px;
 	font-weight: bold;
-	margin-bottom: 50px;
+	margin-bottom: 15px;
 	> span {
 		font-size: 24px;
 		margin-left: 5px;
@@ -56,6 +56,7 @@ body {
 	}
 	ul {
 		position: relative;
+		min-height: 100px;
 		li {
 			right: 0;
 			top: 20px;
