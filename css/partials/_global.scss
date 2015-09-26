@@ -6,9 +6,22 @@ html, body {
 	padding: 20px;
 }
 
-.clock, .weather {
-	font-size: 72px;
+body {
+	opacity: 0;
+	&.active {
+		opacity: 1;
+		@include transition(opacity 0.2s);
+	}
+}
+
+.weather, .subway {
+	font-size: 42px;
 	margin-bottom: 15px;
+}
+
+.clock {
+	font-size: 64px;
+	margin-bottom: 30px;
 }
 
 .weather {
@@ -18,3 +31,8 @@ html, body {
 	}
 }
 
+.subway {
+	img {
+		margin-right: 20px;
+	}
+}

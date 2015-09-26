@@ -123,12 +123,32 @@ html, body {
   padding: 20px;
 }
 
-.clock, .weather {
-  font-size: 72px;
+body {
+  opacity: 0;
+}
+
+body.active {
+  opacity: 1;
+  -webkit-transition: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+
+.weather, .subway {
+  font-size: 42px;
   margin-bottom: 15px;
+}
+
+.clock {
+  font-size: 64px;
+  margin-bottom: 30px;
 }
 
 .weather:before {
   margin-right: 40px;
   font-family: 'icomoon';
+}
+
+.subway img {
+  margin-right: 20px;
 }

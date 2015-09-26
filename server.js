@@ -18,16 +18,44 @@ app.get('/', function(req, res) {
 });
 
 app.get('/weather', function(req, res) {
+	// hard code for now
 	var lng = '-73.984511';
 	var lat = '40.7694445';
 	var key = 'edfb819a19e630697ed7519902c209ee';
-	var url = 'https://api.forecast.io/forecast/' + key + '/' + lat + ',' + lng;
+	var url = 'https://api.forecast.io/forecast/';
+
+	url += key;
+	url += '/';
+	url += lat;
+	url += ',';
+	url += lng;
 
 	request(url, function(err, d) {
 		res.writeHead(200, {"Content-Type": "application/json"});
 		res.write(JSON.stringify(d));
 		res.end();
 	});
+});
+
+app.get('/subway', function(req, res) {
+	// hard code for now
+	var mode = 'transit';
+	var origin = 'Columbus_Circle';
+	var dest = '159_West_25th_NewYork';
+	var key = 'AIzaSyAJFm6N6BEzYHLsdKwapx_43Ez1sD1Igmk';
+	var url = 'https://maps.googleapis.com/maps/api/directions/json';
+
+	url += '?origin='+origin;
+	url += '&destination='+dest;
+  url += '&mode='+mode;
+  url += '&key='+key;
+
+  request(url, function(err, d) {
+  	res.writeHead(200, {"Content-Type": "application/json"});
+  	res.write(JSON.stringify(d));
+  	res.end();
+  });
+
 });
 
 app.listen(port, function() {
