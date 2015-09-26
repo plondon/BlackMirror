@@ -173,3 +173,31 @@ body.active {
 .subway img {
   margin-right: 20px;
 }
+
+.news h3 {
+  font-size: 48px;
+  text-decoration: underline;
+}
+
+.news ul {
+  position: relative;
+  min-height: 100px;
+}
+
+.news ul li {
+  right: 0;
+  top: 20px;
+  opacity: 0;
+  font-size: 36px;
+  position: absolute;
+  -webkit-transition: opacity 0.5s;
+  -moz-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+
+.news ul li.active {
+  opacity: 1;
+  -webkit-transition: opacity 1s;
+  -moz-transition: opacity 1s;
+  transition: opacity 1s;
+}

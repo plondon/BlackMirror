@@ -1,17 +1,19 @@
 define([
   'jquery',
+  'views/news',
   'views/clock',
+  'views/subway',
   'views/weather',
-  'views/subway'
-], function($, ClockView, WeatherView, SubwayView) {
+], function($, NewsView, ClockView, SubwayView, WeatherView) {
 
 "use strict";
 
 $(document).ready(function() {
 
+	new NewsView({ el: $('.news') });
 	new ClockView({ el: $('.clock') });
-	new WeatherView({ el: $('.weather') });
 	new SubwayView({ el: $('.subway') });
+	new WeatherView({ el: $('.weather') });
 
 	$(document).ajaxStop(function() {
 

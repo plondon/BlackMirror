@@ -58,6 +58,16 @@ app.get('/subway', function(req, res) {
 
 });
 
+app.get('/news', function(req, res) {
+	var url = 'https://ajax.googleapis.com/ajax/services/search/news?v=1.0&q=news&rsz=8';
+
+	request(url, function(err, d) {
+		res.writeHead(200, {"Content-Type": "application/json"});
+		res.write(JSON.stringify(d));
+		res.end();
+	});
+});
+
 app.listen(port, function() {
   console.log('BlackMirror is running on http://localhost:' + port);
 });

@@ -48,3 +48,26 @@ body {
 		margin-right: 20px;
 	}
 }
+
+.news {
+	h3 {
+		font-size: 48px;
+		text-decoration: underline;
+	}
+	ul {
+		position: relative;
+		min-height: 100px;
+		li {
+			right: 0;
+			top: 20px;
+			opacity: 0;
+			font-size: 36px;
+			position: absolute;
+			@include transition(opacity 0.5s);
+			&.active {
+				opacity: 1;
+				@include transition(opacity 1s);
+			}
+		}
+	}
+}
