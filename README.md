@@ -1,5 +1,7 @@
 # BlackMirror
 
+![alt tag](./assets/blackmirror.jpg)
+
 BlackMirror is a side project inspired by Hannah Mitt's [HomeMirror](https://github.com/HannahMitt/HomeMirror).
 
 ### Features
