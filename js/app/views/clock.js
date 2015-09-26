@@ -21,6 +21,7 @@ var ClockView = Backbone.View.extend({
 	ticktock: function() {
 		var time = new Date();
 		var hour = time.getHours() % 12;
+		hour = time.getHours() === 12 ? 12 : hour;
 		var ampm = time.getHours() < 12 ? 'AM' : 'PM';
 		var minute = this.addZero(time.getMinutes());
 		var seconds = this.addZero(time.getSeconds());
