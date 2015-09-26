@@ -22,18 +22,30 @@ var SubwayView = Backbone.View.extend({
 		d = JSON.parse(d.body);
 
 		var departure = d.routes[0].legs[0];
+		var firstStep = this.getFirstStep(departure);
 
-		var subwayString = this.formatString(departure);
-		var $subwayIcon = this.getSubwayIcon(departure);
+		var $subwayIcon = this.getSubwayIcon(firstStep);
+		var subwayString = this.getSubwayString(firstStep);
 
 		this.$el.html(subwayString);
 		this.$el.prepend($subwayIcon);
 	},
-	formatString: function(departure) {
+	getFirstStep: function(departure) {
+		var steps = departure.steps;
+		var l = steps.length;
+
+		for ( var i = 0; i < l; i++ ) {
+			if ( steps[i].travel_mode === 'TRANSIT' ) {
+				return steps[i];
+			}
+		}
+	},
+	getSubwayString: function(step) {
 		var time;
-		departure = departure.departure_time;
+
+		var departure_time = step.transit_details.departure_time;
 	
-		var nextTrain = new Date(departure.value*1000).getMinutes();
+		var nextTrain = new Date(departure_time.value*1000).getMinutes();
 		var currentTime = new Date().getMinutes();
 		var minutesAway = 60 % (nextTrain - currentTime);
 
@@ -47,7 +59,7 @@ var SubwayView = Backbone.View.extend({
 		return s;
 	},
 	getSubwayIcon: function(departure) {
-		var src = departure.steps[0].transit_details.line.icon;
+		var src = departure.transit_details.line.icon;
 
 		return $('<img>').attr('src', src);
 	} 

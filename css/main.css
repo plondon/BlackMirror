@@ -118,7 +118,7 @@ table {
 }
 
 html, body {
-  font-family: 'Dosis', sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
   text-align: right;
   padding: 20px;
 }
@@ -141,11 +141,12 @@ body.active {
 
 .clock {
   font-size: 64px;
+  font-weight: bold;
   margin-bottom: 30px;
 }
 
 .weather:before {
-  margin-right: 40px;
+  margin-right: 20px;
   font-family: 'icomoon';
 }
 
