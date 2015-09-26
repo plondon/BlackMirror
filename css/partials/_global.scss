@@ -19,10 +19,20 @@ body {
 	margin-bottom: 15px;
 }
 
-.clock {
+.clock .date {
+	font-size: 24px;
+	margin-bottom: 15px;
+}
+
+.clock .time {
 	font-size: 64px;
 	font-weight: bold;
 	margin-bottom: 30px;
+	> span {
+		font-size: 24px;
+		margin-left: 5px;
+		font-weight: normal;
+	}
 }
 
 .weather {
