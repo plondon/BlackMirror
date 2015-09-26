@@ -47,7 +47,9 @@ var SubwayView = Backbone.View.extend({
 	
 		var nextTrain = new Date(departure_time.value*1000).getMinutes();
 		var currentTime = new Date().getMinutes();
-		var minutesAway = 60 % (nextTrain - currentTime);
+		var minutesAway = nextTrain - currentTime;
+
+		minutesAway = minutesAway <= -1 ? 60 % minutesAway : minutesAway;
 
 		if ( minutesAway === 1 ) {
 			time = 'minute';
