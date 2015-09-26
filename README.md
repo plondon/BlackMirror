@@ -8,7 +8,7 @@ BlackMirror is a side project inspired by Hannah Mitt's [HomeMirror](https://git
   - [ ] Exercise (pull from [nike+](https://developer.nike.com/content/nike-developer-cq/us/en_us/index/documentation/api-docs.html))
   - [x] Weather (pull from forecast.io)
   - [x] Weather Icons (pull from noun project)
-  - [ ] Subway (pull from http://datamine.mta.info/)
+  - [ ] Subway (pull from [Google Maps](https://developers.google.com/maps/documentation/directions/intro#TravelModes))
 
 ### Stack
 
