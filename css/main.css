@@ -119,8 +119,10 @@ table {
 
 html, body {
   font-family: 'Roboto Condensed', sans-serif;
+  background: black;
   text-align: right;
   padding: 20px;
+  color: white;
 }
 
 body {
