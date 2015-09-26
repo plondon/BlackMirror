@@ -15,6 +15,7 @@ var SubwayView = Backbone.View.extend({
 
 		/* Update every minute */
 		setInterval(function() { 
+			var req = $.get('/subway');
 			req.done(function(d) { self.render(d); });
 		}, 1000*60);
 	},

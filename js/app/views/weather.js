@@ -15,6 +15,7 @@ var WeatherView = Backbone.View.extend({
 
 		/* Update every 5 minutes */
 		setInterval(function() { 
+			var req = $.get('/weather');
 			req.done(function(d) { self.render(d); });
 		}, 1000*60*5);
 	},
