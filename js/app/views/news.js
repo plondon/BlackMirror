@@ -32,7 +32,7 @@ var NewsView = Backbone.View.extend({
 		});
 
 		this.cycle();
-		setInterval( this.cycle.bind(this), 5000 );
+		setInterval( this.cycle.bind(this), 4000 );
 	},
 	cycle: function() {
 		var idx = this.idx;
