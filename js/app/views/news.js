@@ -19,7 +19,7 @@ var NewsView = Backbone.View.extend({
 		setInterval(function() { 
 			var req = $.get('/news');
 			req.done(function(d) { self.render(d); });
-		}, 1000*60);
+		}, 1000*60*60 + 4);
 	},
 	render: function(d) {
 		var $ul = this.$el.find('> ul');
