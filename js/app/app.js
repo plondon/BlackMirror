@@ -10,7 +10,7 @@ define([
 
 $(document).ready(function() {
 
-	new NewsView({ el: $('.news') });
+	// new NewsView({ el: $('.news') });
 	new ClockView({ el: $('.clock') });
 	new SubwayView({ el: $('.subway') });
 	new WeatherView({ el: $('.weather') });

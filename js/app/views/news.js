@@ -16,7 +16,7 @@ var NewsView = Backbone.View.extend({
 		req.done(function(d) { self.render(d); });
 
 		/* Update every hour */
-		setInterval(function() { 
+		setInterval(function() {
 			var req = $.get('/news');
 			req.done(function(d) { self.render(d); });
 		}, 1000*60*60 + 4);
