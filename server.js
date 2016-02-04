@@ -68,6 +68,19 @@ app.get('/news', function(req, res) {
 	});
 });
 
+app.get('/stocks', function(req, res) {
+  var url = 'https://www.google.com/finance/info?infotype=infoquoteall&q=';
+  var stocks = req.query.stocks.join();
+
+  url += stocks;
+  
+  request(url, function(err, d) {
+    res.writeHead(200, {"Content-Type": "application/json"});
+    res.write(JSON.stringify(d));
+    res.end();
+  });
+});
+
 app.listen(port, function() {
   console.log('BlackMirror is running on http://localhost:' + port);
 });
