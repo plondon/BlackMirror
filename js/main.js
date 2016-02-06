@@ -3,7 +3,8 @@ require.config({
 	paths: {
 		"jquery": "../lib/jquery.min",
 		"underscore": "../lib/underscore",
-		"backbone": "../lib/backbone"
+		"backbone": "../lib/backbone",
+		"text": "../lib/text"
 	},
 	shim: {
 		jquery: {
@@ -25,7 +26,8 @@ require.config({
 require([
 	"jquery",
 	"underscore",
-	"backbone"
+	"backbone",
+	"text"
 ], function($, _, Backbone) {
 
 	require(['app'], function() {});

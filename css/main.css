@@ -203,3 +203,29 @@ body.active {
   -moz-transition: opacity 1s;
   transition: opacity 1s;
 }
+
+.stocks .slider {
+  float: right;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.stocks ul {
+  left: 0px;
+  position: relative;
+}
+
+.stocks ul:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.stocks ul li.stock {
+  float: left;
+  padding-left: 20px;
+}
+
+.stocks ul li.stock:first-child {
+  margin-left: 0px;
+}

@@ -1,0 +1,15 @@
+<% var stocks = data.d %>
+
+<div class="slider">
+  <ul>
+  <% for (var i=0; i<stocks.length; i++) { %>
+    <% var stock = stocks[i] %>
+    <% var isUp = stock.c >= 0 %>
+    <li class="stock"  class=<%= isUp ? 'up' : 'down' %>>
+      <span><%= stock.t %></span>
+      <span></span>
+      <span><%= stock.c %></span>
+    </li>
+  <% } %>
+  </ul>
+</div>

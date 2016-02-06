@@ -73,3 +73,23 @@ body {
 		}
 	}
 }
+
+.stocks {
+	.slider {
+		float: right;
+		overflow: hidden;
+		display: inline-block;
+	}
+	ul {
+		left: 0px;
+		@include clearfix;
+		position: relative;
+		li.stock {
+			float: left;
+			padding-left: 20px;
+			&:first-child {
+				margin-left: 0px;
+			}
+		}
+	}
+}
