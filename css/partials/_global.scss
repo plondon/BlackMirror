@@ -20,6 +20,7 @@ body {
 	margin-bottom: 60px;
 }
 
+// clock
 .clock .date {
 	font-size: 52px;
 	margin-bottom: 20px;
@@ -36,6 +37,7 @@ body {
 	}
 }
 
+// weather
 .weather {
 	font-size: 100px;
 	&:before {
@@ -44,6 +46,7 @@ body {
 	}
 }
 
+// subway
 .subway {
 	font-size: 52px;
 	img {
@@ -51,6 +54,7 @@ body {
 	}
 }
 
+// news
 .news {
 	h3 {
 		font-size: 48px;
@@ -74,6 +78,7 @@ body {
 	}
 }
 
+// stocks
 .stocks {
 	.slider {
 		float: right;
@@ -84,11 +89,27 @@ body {
 		left: 0px;
 		@include clearfix;
 		position: relative;
+		@include transform(translateZ(0));
 		li.stock {
 			float: left;
 			padding-left: 20px;
 			&:first-child {
 				margin-left: 0px;
+			}
+			&:before {
+				content: '';
+				display: inline-block;
+				@include triangle(10px, $red, down)
+			}
+			&.up {
+				color: $green;
+				&:before {
+					@include triangle(0px, $red, down)
+					@include triangle(10px, $green, up)		
+				}
+			}
+			&.down {
+				color: $red;
 			}
 		}
 	}
