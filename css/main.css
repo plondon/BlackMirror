@@ -139,7 +139,7 @@ body.active {
 }
 
 .weather, .subway {
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 
 .clock .date {
@@ -204,6 +204,15 @@ body.active {
   transition: opacity 1s;
 }
 
+.stocks:before {
+  font-size: 52px;
+  content: '\e900';
+  margin-top: -16px;
+  margin-right: 10px;
+  display: inline-block;
+  font-family: 'icomoon';
+}
+
 .stocks .slider {
   float: right;
   overflow: hidden;
@@ -228,6 +237,7 @@ body.active {
 
 .stocks ul li.stock {
   float: left;
+  font-size: 24px;
   padding-left: 20px;
 }
 

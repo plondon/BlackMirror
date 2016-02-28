@@ -1,55 +1,60 @@
 @font-face {
-	font-family: 'icomoon';
-	src:url('fonts/icomoon.eot?9d6p5j');
-	src:url('fonts/icomoon.eot?#iefix9d6p5j') format('embedded-opentype'),
-		url('fonts/icomoon.ttf?9d6p5j') format('truetype'),
-		url('fonts/icomoon.woff?9d6p5j') format('woff'),
-		url('fonts/icomoon.svg?9d6p5j#icomoon') format('svg');
-	font-weight: normal;
-	font-style: normal;
+    font-family: 'icomoon';
+    src:    url('fonts/icomoon.eot?p5nt58');
+    src:    url('fonts/icomoon.eot?p5nt58#iefix') format('embedded-opentype'),
+        url('fonts/icomoon.ttf?p5nt58') format('truetype'),
+        url('fonts/icomoon.woff?p5nt58') format('woff'),
+        url('fonts/icomoon.svg?p5nt58#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
 [class^="icon-"], [class*=" icon-"] {
-	font-family: 'icomoon';
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
 
-	/* Better Font Rendering =========== */
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-stock-graph:before {
+    content: "\e900";
+}
 .icon-clear-day:before {
-	content: "\e600";
+    content: "\e600";
 }
 .icon-clear-night:before {
-	content: "\e601";
+    content: "\e601";
 }
 .icon-cloudy:before {
-	content: "\e602";
+    content: "\e602";
 }
 .icon-fog:before {
-	content: "\e603";
+    content: "\e603";
 }
 .icon-partly-cloudy-day:before {
-	content: "\e604";
+    content: "\e604";
 }
 .icon-partly-cloudy-night:before {
-	content: "\e605";
+    content: "\e605";
 }
 .icon-rain:before {
-	content: "\e606";
+    content: "\e606";
 }
 .icon-sleet:before {
-	content: "\e607";
+    content: "\e607";
 }
 .icon-snow:before {
-	content: "\e608";
+    content: "\e608";
 }
 .icon-wind:before {
-	content: "\e609";
+    content: "\e609";
 }
+
